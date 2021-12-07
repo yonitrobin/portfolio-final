@@ -29,7 +29,6 @@ ul{
     display: flex;
     justify-content: space-between;
 }
-
 .headshot{
     display: flex;
     justify-content: center;
@@ -48,20 +47,21 @@ form{
     border: black solid 2px;
     text-align: center;
 }
-
 legend{
     text-align: center;
     font-weight: bold;
     font-size: 15px;
     padding: 10px;
-}
+    font-family: 'Abril Fatface', serif;
 
- 
+}
 input, textarea{  
     font-size: 10px;
     resize: both;
 }  
-
+label{
+    font-family: 'Abril Fatface', serif;
+}
 a.skip{
     background: white;
     left: 0;
@@ -92,11 +92,11 @@ a, a:visited{
 .class-for-family, .pictures{
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content:center;    
 }
 
 .class-for-family img{
-    border: 10px solid black;
+    border: 5px solid black;
     margin: 10px;
     width: auto;
     height: 300px; 
@@ -161,8 +161,8 @@ footer{
     width: 100%;
     background-color: black;
     color: white;
-    text-align: left;
-    font-family: 'Roboto';
+    text-align: center;
+    font-family: 'Abril Fatface';
 }
 
 .class_for_footer{
@@ -172,6 +172,7 @@ footer{
 .card-back p{
     display: none;
 }
+
 
 /* tablet view */
 @media screen and (min-width: 800px){
@@ -227,8 +228,7 @@ footer{
     display: inline-block;
     vertical-align: middle;
   }
-
-  
+ 
   .card-back {
     background: black;
     color: white;
@@ -253,6 +253,25 @@ legend{
     font-size: 25px;
     padding: 10px;
 }
+/* animation on h1 */
+
+@keyframes animate{
+    from{
+        text-align: center;
+        font-size: 60px;
+        font-family: 'Abril Fatface', serif;
+    }
+
+    to{
+        text-align: center;
+        font-size: 80px;
+        font-family: 'Abril Fatface', serif;
+    }
+}
+h1{
+    animation-name: animate;
+    animation-duration: 1s;
+}
 }
 
 /* desktop view */
@@ -268,27 +287,7 @@ legend{
     }
 }
 
-/* animation on h1 */
-
-@keyframes animate{
-    from{
-        text-align: center;
-        font-size: 60px;
-        font-family: 'Abril Fatface', serif;
-    }
-
-    to{
-        text-align: center;
-        font-size: 100px;
-        font-family: 'Abril Fatface', serif;
-    }
-}
-h1{
-    animation-name: animate;
-    animation-duration: 5s;
-}
-
-/* prefers reduced mootion  */
+/* prefers reduced motion  */
 @media screen and (prefers-reduced-motion: reduce){
     html{
         scroll-behavior: auto;
@@ -297,11 +296,9 @@ h1{
         -webkit-transition: initial;
         transition: initial;
     }
-
     h1{
         animation-name: none;
-    }
-    
+    } 
     .parallax{
         background-attachment: initial;
     }
@@ -309,8 +306,6 @@ h1{
         transform: rotateY( 0deg ) ;
         transition: initial;
       }
-
-
 }
  
 
