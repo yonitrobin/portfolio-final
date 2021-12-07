@@ -1,0 +1,282 @@
+
+/* style for all */
+
+html{
+    background-color: #E3E3E3;
+}
+header{
+    background-color: grey;
+    width: 100%;
+    
+}
+h1{
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Abril Fatface', serif;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 20px;
+}
+
+#links{
+    padding: 15px;
+}
+.page_links{
+    font-family: 'Abril Fatface', serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/* styling for index.html */
+.class_for_index{
+    padding: 50px;
+}
+.headshot{
+    display: flex;
+    justify-content: center;
+    border: 10px solid black; 
+}
+/* is skip working? */
+a.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+
+a.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+  }
+a, a:visited{
+    color: black;
+}
+
+#current{
+    text-transform: uppercase;
+    background-color: white;
+}
+
+/* for index.html:
+ - need to center image
+ - make whole page fit
+ - background image not covering
+  */
+
+
+  /* styling for family.html */
+
+.class-for-family, .pictures{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.class-for-family img{
+    border: 10px solid black;
+    margin: 10px;
+    width: auto;
+    height: 300px; 
+}
+
+  /* styling for experiences.html */
+  .header-for-experiences{
+    text-align: center;
+    padding: 25px 0px 0px 25px;
+    font-size: 35px;
+    font-family: 'Abril Fatface', serif;  
+}
+
+    .p-for-experiences{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding: 15px;
+    line-height: 2;
+    text-indent: 50px;
+}
+
+  /* USE GRID HERE */
+.umich_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    row-gap: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 2;
+    text-indent: 50px;
+    padding:10px;
+}
+
+.umich_container img{
+    width:100%;
+    height: auto;  
+}
+
+/* styling for aboutme.html */
+.aboutme_paragraphs{
+    font-family: 'Roboto', sans-serif;
+    padding: 15px;
+    font-size: 20px;
+    line-height: 2;
+    text-indent: 50px;
+}
+
+.aboutme_paragraphs img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 50%;
+    height: 50%;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: left;
+    font-family: 'Roboto';
+}
+
+.class_for_footer{
+    padding-top: 20px;
+}
+
+/* tablet view */
+@media screen and (min-width: 800px){
+
+    .umich_container{
+        grid-template-columns: 1fr 1fr;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content:space-evenly;
+        line-height: 1.5em;
+        font-size: 25px;
+    }
+}
+
+/* form styling */
+form{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    border: black solid 2px;
+    margin: 10px;
+}
+legend{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+fieldset{
+    text-align: center;
+} 
+input{  
+    font-size: 10px;
+}
+/* label{
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.flip-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+  .card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+  .flip-card:hover .card-content {
+    transform: rotateY( 180deg ) ;
+    transition: transform 0.5s;
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* color: black; */
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Abril Fatface', serif;
+    backface-visibility: hidden;
+    line-height: 200px;
+  }
+  /* if text has multiple lines... */
+  .card-front,
+  .card-back p{
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  
+  .card-back {
+    background: black;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+/* desktop view */
+@media screen and (min-width: 1024px){
+    .umich_container img{
+        width: 50%;
+        height: auto;  
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* animation on h1 */
+
+@keyframes animate{
+    from{
+        text-align: center;
+        font-size: 60px;
+        font-family: 'Abril Fatface', serif;
+    }
+
+    to{
+        text-align: center;
+        font-size: 100px;
+        font-family: 'Abril Fatface', serif;
+    }
+}
+h1{
+    animation-name: animate;
+    animation-duration: 5s;
+}
+
+/* turn off animation */
+@media screen and (prefers-reduced-motion: reduce){
+    #logo{
+        animation-name: none;
+    }
+}
+ 
+
