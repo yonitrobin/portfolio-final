@@ -7,15 +7,13 @@ html{
 }
 header{
     background-color: grey;
-    width: 100%;
-    
+    width: 100%;    
 }
 h1{
     text-align: center;
     font-size: 60px;
     font-family: 'Abril Fatface', serif;
 }
-
 ul{
     display: flex;
     flex-direction: column;
@@ -23,7 +21,6 @@ ul{
     line-height: 1.5em;
     font-size: 20px;
 }
-
 #links{
     padding: 15px;
 }
@@ -33,17 +30,13 @@ ul{
     justify-content: space-between;
 }
 
-/* styling for index.html */
-
 .headshot{
     display: flex;
     justify-content: center;
     border: 10px solid black; 
 }
+/* form styling on index.html */
 
-
-
-/* form styling */
 form{
     display:block;
     background-color: #737373;
@@ -94,9 +87,7 @@ a, a:visited{
     background-color: white;
 }
 
-
-
-  /* styling for family.html */
+/* styling for family.html */
 
 .class-for-family, .pictures{
     display: flex;
@@ -111,7 +102,7 @@ a, a:visited{
     height: 300px; 
 }
 
-  /* styling for experiences.html */
+/* styling for experiences.html */
   .header-for-experiences{
     text-align: center;
     padding: 25px 0px 0px 25px;
@@ -178,6 +169,10 @@ footer{
     padding-top: 20px;
 }
 
+.card-back > p{
+    display: none;
+}
+
 /* tablet view */
 @media screen and (min-width: 800px){
 
@@ -192,8 +187,9 @@ footer{
         line-height: 1.5em;
         font-size: 25px;
     }
-}
-
+    .headshot{
+        display:none ;
+    }
 
 .flip-card {
     position: relative;
@@ -247,23 +243,16 @@ footer{
     min-height:500px;
     background-repeat: no-repeat;  
 } 
+
 form{
-    display:block;
-    background-color: #737373;
-    padding: 25px;
-    margin: auto;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    border: black solid 2px;
-    text-align: center;
+   padding: 25px;
+   font-size: 20px;
 }
 
 legend{
-    text-align: center;
-    font-weight: bold;
     font-size: 25px;
     padding: 10px;
+}
 }
 
 /* desktop view */
@@ -273,6 +262,9 @@ legend{
         height: auto;  
         margin-left: auto;
         margin-right: auto;
+    }
+    .parallax{
+        min-height: 700px;
     }
 }
 
