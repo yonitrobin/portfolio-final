@@ -3,6 +3,7 @@
 
 html{
     background-color: #E3E3E3;
+    scroll-behavior: smooth;
 }
 header{
     background-color: grey;
@@ -32,18 +33,42 @@ ul{
     justify-content: space-between;
 }
 
-
-
 /* styling for index.html */
-.class_for_index{
-    padding: 50px;
-}
+
 .headshot{
     display: flex;
     justify-content: center;
     border: 10px solid black; 
 }
-/* is skip working? */
+
+
+
+/* form styling */
+form{
+    display:block;
+    background-color: #737373;
+    padding: 25px;
+    margin: auto;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    border: black solid 2px;
+    text-align: center;
+}
+
+legend{
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+}
+
+ 
+input, textarea{  
+    font-size: 10px;
+    resize: both;
+}  
+
 a.skip{
     background: white;
     left: 0;
@@ -69,11 +94,6 @@ a, a:visited{
     background-color: white;
 }
 
-/* for index.html:
- - need to center image
- - make whole page fit
- - background image not covering
-  */
 
 
   /* styling for family.html */
@@ -99,7 +119,7 @@ a, a:visited{
     font-family: 'Abril Fatface', serif;  
 }
 
-    .p-for-experiences{
+.p-for-experiences{
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     padding: 15px;
@@ -174,29 +194,6 @@ footer{
     }
 }
 
-/* form styling */
-form{
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    border: black solid 2px;
-    margin: 10px;
-}
-legend{
-    text-align: center;
-    font-weight: bold;
-    font-size: 25px;
-}
-fieldset{
-    text-align: center;
-} 
-input{  
-    font-size: 10px;
-}
-/* label{
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
-} */
 
 .flip-card {
     position: relative;
@@ -241,6 +238,33 @@ input{
     color: white;
     transform: rotateY(180deg);
   }
+  /* parallax styling */
+.parallax{
+    background-image: url(../imgs/headshot.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    min-height:500px;
+    background-repeat: no-repeat;  
+} 
+form{
+    display:block;
+    background-color: #737373;
+    padding: 25px;
+    margin: auto;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    border: black solid 2px;
+    text-align: center;
+}
+
+legend{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px;
+}
 
 /* desktop view */
 @media screen and (min-width: 1024px){
@@ -272,11 +296,29 @@ h1{
     animation-duration: 5s;
 }
 
-/* turn off animation */
+/* prefers reduced mootion  */
 @media screen and (prefers-reduced-motion: reduce){
-    #logo{
+    html{
+        scroll-behavior: auto;
+    }
+    a.skip{
+        -webkit-transition: initial;
+        transition: initial;
+    }
+
+    h1{
         animation-name: none;
     }
+    
+    .parallax{
+        background-attachment: initial;
+    }
+    .flip-card:hover .card-content {
+        transform: rotateY( 0deg ) ;
+        transition: initial;
+      }
+
+
 }
  
 
