@@ -169,7 +169,7 @@ footer{
     padding-top: 20px;
 }
 
-.card-back > p{
+.card-back p{
     display: none;
 }
 
