@@ -208,6 +208,12 @@ footer{
     transform: rotateY( 180deg ) ;
     transition: transform 0.5s;
   }
+  /* make keyboard accessible */
+  .flip-card:focus .card-content{
+    transform: rotateY( 180deg ) ;
+    transition: transform 0.5s;
+
+  }
   
   .card-front,
   .card-back {
